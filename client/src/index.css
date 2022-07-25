@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Exdoxus-regular";
+  src: local("Exdoxus"),
+    url("./assets/fonts/Eudoxus-Sans-font/EudoxusSans-Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Exdoxus-bold";
+  src: local("Exdoxus"),
+    url("./assets/fonts/Eudoxus-Sans-font/EudoxusSans-Bold.ttf") format("woff");
+}
+
+body {
+  margin: 0;
+}
