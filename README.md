@@ -6,23 +6,23 @@
 
 - [x] landing page
 
-  - [] responsive
+  - [ ] responsive
 
-- [] product page
+- [ ] product page
 
-  - [] responsive
+  - [ ] responsive
 
-- [] product detail page
+- [ ] product detail page
 
-  - [] responsive
+  - [ ] responsive
 
-- [] services page
+- [ ] services page
 
-  - [] responsive
+  - [ ] responsive
 
-- [] Article page
+- [ ] Article page
 
-  - [] responsive
+  - [ ] responsive
 
-- [] About Us page
-  - [] responsive
+- [ ] About Us page
+  - [ ] responsive
