@@ -46,10 +46,11 @@ const BoxFooter = styled.div`
   display: flex;
   align-items: center;
 
-  > img {
+  > img:first-child {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
   }
 `;
 

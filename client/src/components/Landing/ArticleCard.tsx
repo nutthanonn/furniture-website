@@ -58,7 +58,7 @@ const Bottom = styled.div`
 
 const CustomHeading3 = styled(Paragraph1)`
   text-overflow: ellipsis;
-  width: 30rem;
+  width: 31rem;
   white-space: nowrap;
   overflow: hidden;
   opacity: 0.7;

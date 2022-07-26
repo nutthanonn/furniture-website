@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Yellow, Gray } from "../../common/Color";
 import { Heading5, Heading2, Paragraph1 } from "../../common/TextSlyle";
+import ArticleCarousel from "./ArticleCarousel";
 
 const ArticlesLeftContent: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const ArticlesLeftContent: React.FC = () => {
           Pellentesque etiam blandit in tincidunt at donec.
         </Paragraph1>
       </BoxSubTitle>
+      <ArticleCarousel />
     </Box>
   );
 };

@@ -3,7 +3,7 @@ import Landing from "./pages/Landing";
 
 const App: React.FC = () => {
   return (
-    <div style={{ height: "700vh" }}>
+    <div style={{ height: "1000vh" }}>
       <Landing />
     </div>
   );

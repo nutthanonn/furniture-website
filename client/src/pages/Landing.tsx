@@ -9,6 +9,7 @@ import OurProduct from "../components/Landing/OurProduct";
 import Testimonials from "../components/Landing/Testimonials";
 import TestimonialsCarousel from "../components/Landing/TestimonialsCarousel";
 import Articles from "../components/Landing/Articles";
+import LearnMore from "../components/Landing/LearnMore";
 
 const Landing: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Landing: React.FC = () => {
       <Testimonials />
       <TestimonialsCarousel />
       <Articles />
+      <LearnMore />
     </div>
   );
 };

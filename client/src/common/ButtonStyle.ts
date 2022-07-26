@@ -12,6 +12,7 @@ export const Button = styled.button`
   border: 0;
   background-color: ${(props: propsType) => props.bgcolor || Gray};
   color: ${(props: propsType) => props.color || Gray};
+  display: flex;
   > * {
     margin: auto;
   }
