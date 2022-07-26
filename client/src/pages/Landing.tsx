@@ -10,6 +10,7 @@ import Testimonials from "../components/Landing/Testimonials";
 import TestimonialsCarousel from "../components/Landing/TestimonialsCarousel";
 import Articles from "../components/Landing/Articles";
 import LearnMore from "../components/Landing/LearnMore";
+import Footer from "../shared/Footer";
 
 const Landing: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const Landing: React.FC = () => {
       <TestimonialsCarousel />
       <Articles />
       <LearnMore />
+      <Footer />
     </div>
   );
 };
