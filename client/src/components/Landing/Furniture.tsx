@@ -20,6 +20,7 @@ export default Furniture;
 const BoxImage = styled.div`
   /* border: 2px solid black; */
   position: relative;
+  margin-top: 5.75rem;
 `;
 
 const Img = styled.img`

@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import SearchIcon from "../../assets/svg/search.svg";
-import { Button } from "../../common/ButtonStyle";
+import { PrimaryButton } from "../../common/ButtonStyle";
 import { Input } from "../../common/InputStyle";
 import { Heading5 } from "../../common/TextSlyle";
+import { Gray } from "../../common/Color";
 
 const Search: React.FC = () => {
   const handleInput = useRef<HTMLInputElement>(null);
@@ -24,7 +25,12 @@ const Search: React.FC = () => {
 
   return (
     <Box role="form" onSubmit={handleSubmit}>
-      <img src={SearchIcon} alt="" onClick={handleClick} />
+      <img
+        src={SearchIcon}
+        alt=""
+        onClick={handleClick}
+        style={{ cursor: "pointer" }}
+      />
       <InputCustom
         type="text"
         ref={handleInput}
@@ -33,10 +39,11 @@ const Search: React.FC = () => {
         autoComplete="false"
         onChange={handleChange}
         value={searchVal}
+        style={{ color: Gray }}
       />
-      <BtnCustom type="submit">
-        <BtnChild>Search</BtnChild>
-      </BtnCustom>
+      <PrimaryButton type="submit">
+        <Heading5 color="white">Search</Heading5>
+      </PrimaryButton>
     </Box>
   );
 };
@@ -59,20 +66,7 @@ const Box = styled.form`
 const InputCustom = styled(Input)`
   margin: 0 1rem;
   flex-grow: 1;
-  color: #afadb5;
   ::placeholder {
     color: #afadb5;
   }
-`;
-
-const BtnCustom = styled(Button)`
-  width: 10.625rem;
-  height: 3.375rem;
-  background: #518581;
-  cursor: pointer;
-`;
-
-const BtnChild = styled(Heading5)`
-  color: white;
-  margin: auto;
 `;

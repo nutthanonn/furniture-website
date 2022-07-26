@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SubTitle from "./SubTitle";
 import StarIcon from "../../assets/svg/star.svg";
 import ArrowIconImg from "../../assets/svg/arrow.svg";
+import { Container } from "../../common/Container";
 
 const Title: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Title: React.FC = () => {
       <BoxTitle>
         <Heading1>
           Discover Furniture With High Quality Woo
-          <img src={StarIcon} />
+          <img src={StarIcon} alt="star" />
         </Heading1>
       </BoxTitle>
       <SubTitle />
@@ -22,9 +23,9 @@ const Title: React.FC = () => {
 
 export default Title;
 
-const BoxHeader = styled.div`
-  padding: 6.25rem;
+const BoxHeader = styled(Container)`
   position: relative;
+  margin-top: 6.25rem;
 `;
 
 const BoxTitle = styled.div`
@@ -35,6 +36,6 @@ const BoxTitle = styled.div`
 
 const ArrowIcon = styled.img`
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 5%;
 `;

@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import Landing from "./pages/Landing";
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <div style={{ height: "300vh" }}>
+    <div style={{ height: "700vh" }}>
       <Landing />
     </div>
   );

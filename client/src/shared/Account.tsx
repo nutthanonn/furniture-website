@@ -5,14 +5,18 @@ import AccountIcon from "../assets/svg/account.svg";
 
 const Account: React.FC = () => {
   return (
-    <div>
+    <Box>
       <Img src={BagIcon} />
       <Img src={AccountIcon} />
-    </div>
+    </Box>
   );
 };
 
 export default Account;
+
+const Box = styled.div`
+  margin: 0 6.25rem 0 0;
+`;
 
 const Img = styled.img`
   margin-inline: 0.75rem;
