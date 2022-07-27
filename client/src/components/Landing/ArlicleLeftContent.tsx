@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Yellow, Gray } from "../../common/Color";
+import { device } from "../../common/ScreenSize";
 import { Heading5, Heading2, Paragraph1 } from "../../common/TextSlyle";
 import ArticleCarousel from "./ArticleCarousel";
 
@@ -32,10 +33,20 @@ const Box = styled.div`
 `;
 
 const BoxTitle = styled.div`
-  width: 34rem;
+  width: 36rem;
+
+  @media only screen and (${device.mobileL}) {
+    width: 20rem;
+  }
+  /* border: 2px solid black; */
 `;
 
 const BoxSubTitle = styled.div`
   width: 34rem;
   margin: 1.875rem 0 3.125rem 0;
+  @media only screen and (${device.mobileL}) {
+    width: 20rem;
+  }
+
+  /* border: 2px solid black; */
 `;

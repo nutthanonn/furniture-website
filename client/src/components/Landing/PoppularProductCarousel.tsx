@@ -13,8 +13,7 @@ const PoppularProductCarousel: React.FC = () => {
   return (
     <Box>
       <Swiper
-        spaceBetween={1.813}
-        slidesPerView={3.5}
+        slidesPerView={window.innerWidth <= 1024 ? 1 : 4}
         navigation={{
           nextEl: ".swiper-button-next-custom",
           prevEl: ".swiper-button-prev-custom",

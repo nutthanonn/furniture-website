@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../common/ScreenSize";
 import { Paragraph1, Heading3 } from "../../common/TextSlyle";
 
 interface valTypes {
@@ -45,24 +46,28 @@ const Img = styled.div`
     ),
     url(${(props: { img: string }) => props.img});
   background-size: cover;
-  position: relative;
   display: flex;
   align-items: flex-end;
+  @media only screen and (${device.mobileL}) {
+    width: 20rem;
+    height: 20rem;
+  }
 `;
 
 const Bottom = styled.div`
   width: 100%;
-  margin: 1.625rem;
+  margin: 0 0 1.625rem 1.625rem;
   /* border: 2px solid black; */
 `;
 
 const CustomHeading3 = styled(Paragraph1)`
-  text-overflow: ellipsis;
   width: 31rem;
-  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   opacity: 0.7;
   margin: 0 0 14px 0;
+  width: calc(100% - 5.4rem);
 `;
 
 const Readmore = styled(Paragraph1)`

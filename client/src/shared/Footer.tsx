@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../assets/svg/logo.svg";
 import { Container } from "../common/Container";
+import { device } from "../common/ScreenSize";
 import { Paragraph1, Heading4 } from "../common/TextSlyle";
 import { Contact } from "../data/Contact";
+import { Gray } from "../common/Color";
 
 const Footer: React.FC = () => {
   return (
@@ -11,19 +13,19 @@ const Footer: React.FC = () => {
       <Box>
         <LogoDetail>
           <img src={Logo} alt="" />
-          <Paragraph1 style={{ width: "31.5rem" }}>
+          <Paragraph1Impl>
             Lalasia is digital agency that help you make better experience
             iaculis cras in.
-          </Paragraph1>
+          </Paragraph1Impl>
         </LogoDetail>
         <ContactBox>
-          {Contact.map((item) => {
+          {Contact.map((item, i) => {
             return (
-              <Grid>
-                <Heading4 style={{ margin: 0 }}>{item.title}</Heading4>
-                {item.categories.map((categories) => {
+              <Grid key={i}>
+                <Heading4>{item.title}</Heading4>
+                {item.categories.map((categories, i) => {
                   return (
-                    <ContactLink style={{ margin: "12px 0" }}>
+                    <ContactLink style={{ margin: "12px 0" }} key={i}>
                       {categories}
                     </ContactLink>
                   );
@@ -44,8 +46,13 @@ const Box = styled.div`
   display: flex;
   justify-content: space-between;
   border-top: 1.5px solid #ece4de;
-  height: 18.125rem;
   margin-bottom: 5.5rem;
+  @media only screen and (${device.tablet}) {
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+
+  /* border: 2px solid black; */
 `;
 
 const LogoDetail = styled.div`
@@ -56,14 +63,34 @@ const ContactBox = styled.div`
   display: grid;
   margin-top: auto;
   width: 35rem;
-  height: 13rem;
+  height: fit-content;
   grid-template-columns: auto auto auto;
+  @media only screen and (${device.mobileL}) {
+    width: 100%;
+  }
+  /* border: 2px solid black; */
 `;
 
 const Grid = styled.div`
   margin-left: auto;
+  @media only screen and (${device.laptop}) {
+    margin-right: auto;
+    margin-left: 0;
+  }
 `;
 
 const ContactLink = styled(Paragraph1)`
   cursor: pointer;
+  @media only screen and (${device.mobileM}) {
+    font-size: 10px;
+    color: ${Gray};
+  }
+`;
+
+const Paragraph1Impl = styled(Paragraph1)`
+  cursor: pointer;
+  @media only screen and (${device.mobileM}) {
+    font-size: 10px;
+    color: ${Gray};
+  }
 `;

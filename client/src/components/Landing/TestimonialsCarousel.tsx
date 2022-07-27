@@ -5,16 +5,15 @@ import TestimonialsCard from "./TestimonialsCard";
 const TestimonialsCarousel: React.FC = () => {
   return (
     <Box>
-      <SlideBox>
-        {[1, 2, 3].map(() => {
-          return <TestimonialsCard />;
-        })}
-      </SlideBox>
-      <SlideBox>
-        {[1, 2, 3].map(() => {
-          return <TestimonialsCard />;
-        })}
-      </SlideBox>
+      {[11, 22].map((item) => {
+        return (
+          <SlideBox key={item}>
+            {[1, 2, 3].map((i) => {
+              return <TestimonialsCard key={i} />;
+            })}
+          </SlideBox>
+        );
+      })}
     </Box>
   );
 };

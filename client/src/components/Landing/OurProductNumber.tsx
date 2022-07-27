@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Heading2, Paragraph1 } from "../../common/TextSlyle";
 import { Gray } from "../../common/Color";
+import { device } from "../../common/ScreenSize";
 
 interface OurProductNumberProps {
   title: string;
@@ -26,11 +27,13 @@ const data: Array<OurProductNumberProps> = [
 const OurProductNumber: React.FC = (props) => {
   return (
     <Box>
-      {data.map((item) => {
+      {data.map((item, i) => {
         return (
-          <div>
+          <div key={i}>
             <Heading2 style={{ margin: 0 }}>{item.nums}</Heading2>
-            <Paragraph1 color={Gray}>{item.title}</Paragraph1>
+            <Paragraph1Impl color={Gray} style={{ margin: 0 }}>
+              {item.title}
+            </Paragraph1Impl>
           </div>
         );
       })}
@@ -45,5 +48,15 @@ const Box = styled.div`
   display: flex;
   gap: 3.125rem;
   justify-content: flex-end;
+
   /* border: 2px solid black; */
+`;
+
+const Paragraph1Impl = styled(Paragraph1)`
+  @media only screen and (${device.mobileL}) {
+    font-size: 13px;
+  }
+  @media only screen and (${device.mobileM}) {
+    font-size: 10px;
+  }
 `;

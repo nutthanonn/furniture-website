@@ -8,6 +8,7 @@ import {
 } from "../../common/TextSlyle";
 import { data } from "../../assets/test/data/articleBlog";
 import { Gray } from "../../common/Color";
+import { device } from "../../common/ScreenSize";
 
 const ArticleRightContent: React.FC = () => {
   return (
@@ -20,7 +21,9 @@ const ArticleRightContent: React.FC = () => {
               <Paragraph1 color={Gray} style={{ margin: 0 }}>
                 {item.categories}
               </Paragraph1>
-              <Heading3 style={{ margin: "1rem 0" }}>{item.title}</Heading3>
+              <Heading3Impl style={{ margin: "1rem 0" }}>
+                {item.title}
+              </Heading3Impl>
               <CustomParagraph1 color={Gray}>
                 {item.description}
               </CustomParagraph1>
@@ -51,8 +54,9 @@ const Box = styled.div`
 
 const BoxContent = styled.div`
   display: flex;
-  height: 16.25rem;
+  height: fit-content;
   width: fit-content;
+
   /* border: 2px solid black; */
 `;
 
@@ -60,12 +64,40 @@ const Img = styled.img`
   width: 16.25rem;
   height: 16.25rem;
   object-fit: cover;
+  @media only screen and (${device.mobileL}) {
+    width: 210px;
+    height: 210px;
+  }
+
+  @media only screen and (${device.mobileL}) {
+    width: 170px;
+    height: 170px;
+  }
 `;
 
 const BoxTitle = styled.div`
   margin: 1.625rem 1rem;
-  width: 20.5rem;
+  width: 100%;
   height: 13rem;
+  @media only screen and (${device.mobileL}) {
+    margin: auto 1rem;
+  }
+  /* border: 2px solid black; */
+`;
+
+const Heading3Impl = styled(Heading3)`
+  width: calc(100% - 1rem);
+  height: 4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media only screen and (${device.mobileL}) {
+    font-size: 24px;
+  }
+
   /* border: 2px solid black; */
 `;
 
@@ -74,6 +106,10 @@ const CustomParagraph1 = styled(Paragraph1)`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  @media only screen and (${device.mobileL}) {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const BoxUser = styled.div`
@@ -89,5 +125,17 @@ const BoxUser = styled.div`
   }
   > * {
     margin: 0;
+  }
+  > p {
+    @media only screen and (${device.mobileL}) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  > h6 {
+    @media only screen and (${device.mobileL}) {
+      font-size: 14px;
+    }
   }
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Yellow, Gray } from "../common/Color";
+import { device } from "../common/ScreenSize";
 import { Heading5, Heading2, Paragraph1 } from "../common/TextSlyle";
 
 interface ArticleProps {
@@ -47,5 +48,8 @@ const BoxSubtitle = styled.div`
   text-align: center;
   width: 41rem;
   margin: 0 auto;
+  @media only screen and (${device.mobileL}) {
+    width: 100%;
+  }
   /* border: 2px solid black; */
 `;

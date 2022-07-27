@@ -9,6 +9,7 @@ import { Button } from "../../common/ButtonStyle";
 import ArrowLeft from "../../assets/svg/arrow-article-left.svg";
 import ArrowRight from "../../assets/svg/arrow-article-right.svg";
 import { data } from "../../assets/test/data/articleCarouselData";
+import { device } from "../../common/ScreenSize";
 
 const ArticleCarousel: React.FC = () => {
   return (
@@ -22,9 +23,9 @@ const ArticleCarousel: React.FC = () => {
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 3000 }}
       >
-        {data.map((item) => {
+        {data.map((item, i) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <ArticleCard {...item} />
             </SwiperSlide>
           );
@@ -48,6 +49,10 @@ const Box = styled.div`
   position: relative;
   width: 36.375rem;
   height: 35.3rem;
+  @media only screen and (${device.mobileL}) {
+    width: 20rem;
+    height: fit-content;
+  }
   /* border: 2px solid black; */
 `;
 
@@ -56,6 +61,10 @@ const BoxBtn = styled.div`
   display: flex;
   bottom: calc(-70px / 2);
   right: 0;
+  @media only screen and (${device.laptop}) {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const BtnCustom = styled(Button)`

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { blogData } from "../../assets/test/data/blog";
 import { Heading3, Paragraph1 } from "../../common/TextSlyle";
 import { Gray } from "../../common/Color";
+import { device } from "../../common/ScreenSize";
 
 const BenefitBlog: React.FC = () => {
   return (
@@ -30,13 +31,17 @@ const Box = styled.div`
   height: fit-content;
   width: fit-content;
   margin-top: 3.125rem;
-  /* border: 2px solid black; */
+  @media only screen and (${device.laptop}) {
+    flex-direction: column;
+  }
 `;
 
 const Blog = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 100px rgba(175, 173, 181, 0.1);
   padding: 1.5rem 1.5rem 0;
+
+  /* border: 2px solid black; */
 `;
 
 const Img = styled.div`

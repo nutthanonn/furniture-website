@@ -1,3 +1,4 @@
+import { device } from "./ScreenSize";
 import { Black } from "./Color";
 import styled from "styled-components";
 
@@ -17,6 +18,10 @@ export const Heading2 = styled.h2`
   line-height: 130%;
   font-size: 44px;
   color: ${(props: propsType) => props.color || Black};
+
+  @media only screen and (${device.mobileL}) {
+    font-size: 24px;
+  }
 `;
 
 export const Heading3 = styled.h3`
@@ -38,6 +43,10 @@ export const Heading5 = styled.h5`
   line-height: 130%;
   font-size: 18px;
   color: ${(props: propsType) => props.color || Black};
+
+  @media only screen and (${device.mobileL}) {
+    font-size: 16px;
+  }
 `;
 
 export const Heading6 = styled.h6`
@@ -73,6 +82,10 @@ export const Paragraph1 = styled.p`
   font-size: 18px;
   line-height: 180%;
   color: ${(props: propsType) => props.color || Black};
+
+  @media only screen and (${device.mobileL}) {
+    font-size: 14px;
+  }
 `;
 
 export const Paragraph2 = styled.p`
