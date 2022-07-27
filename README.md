@@ -6,7 +6,7 @@
 
 - [x] landing page
 
-  - [ ] responsive
+  - [x] responsive
 
 - [ ] product page
 
