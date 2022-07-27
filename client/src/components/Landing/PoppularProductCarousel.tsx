@@ -8,12 +8,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/mousewheel";
 import PopularProductCard from "./PopularProductCard";
+import { SlidePerScreen } from "../../helper/CarouselPerScreen";
 
 const PoppularProductCarousel: React.FC = () => {
   return (
     <Box>
       <Swiper
-        slidesPerView={window.innerWidth <= 1024 ? 1 : 4}
+        slidesPerView={SlidePerScreen(window.innerWidth)}
         navigation={{
           nextEl: ".swiper-button-next-custom",
           prevEl: ".swiper-button-prev-custom",

@@ -69,4 +69,19 @@ const ArrowIcon = styled.img`
   @media only screen and (${device.laptop}) {
     left: -5%;
   }
+  @media only screen and (${device.mobileL}) {
+    top: -20%;
+    left: -25%;
+    transform: scale(0.6);
+  }
+
+  @media only screen and (${device.mobileM}) {
+    left: -30%;
+    transform: scale(0.6);
+  }
+
+  @media only screen and (${device.mobileM}) {
+    left: -40%;
+    transform: scale(0.4);
+  }
 `;

@@ -15,7 +15,7 @@ import Footer from "../shared/Footer";
 const Landing: React.FC = () => {
   return (
     <div>
-      {/* <Navigation /> */}
+      <Navigation />
       <Title />
       <Furniture />
       <Benefit />

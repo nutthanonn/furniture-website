@@ -20,6 +20,7 @@ const Box = styled(Container)`
   /* width: 100%; */
   margin-top: 11.25rem;
   display: flex;
+  justify-content: center;
 
   gap: 3.125rem;
   @media only screen and (${device.laptop}) {

@@ -5,6 +5,7 @@ import { Heading2 } from "../../common/TextSlyle";
 import { PrimaryButton } from "../../common/ButtonStyle";
 import Arrow from "../../assets/svg/arrow-article-right.svg";
 import { Heading5 } from "../../common/TextSlyle";
+import { device } from "../../common/ScreenSize";
 
 const LearnMore: React.FC = () => {
   return (
@@ -26,6 +27,11 @@ const Box = styled(Container)`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media only screen and (${device.laptop}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   /* border: 2px solid black; */
 `;

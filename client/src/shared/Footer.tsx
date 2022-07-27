@@ -57,6 +57,11 @@ const Box = styled.div`
 
 const LogoDetail = styled.div`
   margin: auto 0;
+  width: 30rem;
+  @media only screen and (${device.mobileL}) {
+    width: 100%;
+  }
+  /* border: 2px solid black; */
 `;
 
 const ContactBox = styled.div`
