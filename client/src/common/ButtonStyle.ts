@@ -1,4 +1,4 @@
-import { Gray } from "./Color";
+import { Gray, Green } from "./Color";
 import styled from "styled-components";
 
 interface propsType {
@@ -21,7 +21,7 @@ export const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   width: 10.625rem;
   height: 3.375rem;
-  background: #518581;
+  background: ${Green};
   cursor: pointer;
   color: ${(props: propsType) => props.color || Gray};
   > * {
