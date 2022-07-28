@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Paragraph1 } from "../common/TextSlyle";
 import { useNavigate } from "react-router-dom";
+import { Green } from "../common/Color";
+import { GetPath } from "../helper/GetPath";
 
 const Tab: React.FC = () => {
   const TabItem = ["Product", "Service", "Article", "About Us"];
   const [isSelect, setIsSelect] = useState<string>("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setIsSelect(GetPath());
+  });
 
   const handleClick = (item: string) => {
     setIsSelect(item);
@@ -53,5 +59,9 @@ const HeadingCustom = styled(Paragraph1)`
     bottom: -140%;
     left: 0;
     transition: background-color 0.25s ease;
+  }
+  color: ${(props: { val: boolean }) => (props.val ? Green : "black")};
+  &:hover {
+    color: ${Green};
   }
 `;

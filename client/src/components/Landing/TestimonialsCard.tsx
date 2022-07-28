@@ -36,11 +36,17 @@ const Box = styled.div`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1.625rem 1.5rem 0 1.5rem;
   margin: 0 2rem;
+  @media only screen and (${device.mobileL}) {
+    width: 20rem;
+  }
 `;
 
 const BoxTitle = styled.div`
   width: 31rem;
   margin: 1.625rem 0;
+  @media only screen and (${device.mobileL}) {
+    width: fit-content;
+  }
 `;
 
 const BoxFooter = styled.div`

@@ -42,7 +42,7 @@ const Box = styled.div`
 const Img = styled.img`
   width: 100%;
   height: 22.5rem;
-  background-size: cover;
+  object-fit: cover;
 `;
 
 const TextBox = styled.div`

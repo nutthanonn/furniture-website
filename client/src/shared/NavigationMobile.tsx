@@ -24,7 +24,7 @@ const NavigationMobile: React.FC = () => {
 
   return (
     <Box>
-      <img src={Logo} alt="" />
+      <img src={Logo} alt="" onClick={() => navigate("")} />
       <MenuIcon src={MenuIconSvg} alt="" onClick={() => setOpenMenu(true)} />
       <MenuBar isOpen={openMenu}>
         {TabItem.map((item, i) => {
@@ -95,7 +95,7 @@ const MenuItem = styled.div`
   background-color: transparent;
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
   &:hover {
     background-color: rgba(239, 239, 240, 0.9);
     > h3 {
