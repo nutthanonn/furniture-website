@@ -86,6 +86,10 @@ const Grid = styled.div`
 
 const ContactLink = styled(Paragraph1)`
   cursor: pointer;
+  @media only screen and (${device.tablet}) {
+    color: ${Gray};
+  }
+
   @media only screen and (${device.mobileM}) {
     font-size: 10px;
     color: ${Gray};
@@ -94,6 +98,10 @@ const ContactLink = styled(Paragraph1)`
 
 const Paragraph1Impl = styled(Paragraph1)`
   cursor: pointer;
+  @media only screen and (${device.tablet}) {
+    color: ${Gray};
+  }
+
   @media only screen and (${device.mobileM}) {
     font-size: 10px;
     color: ${Gray};
