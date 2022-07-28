@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Paragraph1 } from "../common/TextSlyle";
+import { useNavigate } from "react-router-dom";
 
 const Tab: React.FC = () => {
   const TabItem = ["Product", "Service", "Article", "About Us"];
-  const [isSelect, setIsSelect] = useState<string>("Product");
+  const [isSelect, setIsSelect] = useState<string>("");
+  const navigate = useNavigate();
+
+  const handleClick = (item: string) => {
+    setIsSelect(item);
+    navigate(`/${item}`);
+  };
 
   return (
     <div>
@@ -14,7 +21,7 @@ const Tab: React.FC = () => {
             <HeadingCustom
               key={index}
               val={isSelect === item ? true : false}
-              onClick={() => setIsSelect(item)}
+              onClick={() => handleClick(item)}
             >
               {item}
             </HeadingCustom>

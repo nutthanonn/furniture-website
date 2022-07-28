@@ -4,17 +4,16 @@ import Tab from "./Tab";
 import CompanyLogo from "../assets/svg/logo.svg";
 import Account from "./Account";
 import { device } from "../common/ScreenSize";
-import { Container } from "../common/Container";
 import NavigationMobile from "./NavigationMobile";
 
 const Navigation: React.FC = () => {
   return (
     <Nav>
-      {/* <Desktop>
+      <Desktop>
         <Logo src={CompanyLogo} alt="logo" />
         <Tab />
         <Account />
-      </Desktop> */}
+      </Desktop>
       <Mobile>
         <NavigationMobile />
       </Mobile>
@@ -32,7 +31,7 @@ const Nav = styled.nav`
   align-items: center;
 `;
 
-const NavCustom = styled(Container)`
+const NavCustom = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -40,13 +39,14 @@ const NavCustom = styled(Container)`
 `;
 
 const Desktop = styled(NavCustom)`
+  /* border: 2px solid black; */
   @media only screen and (${device.tablet}) {
     display: none;
   }
 `;
 
 const Mobile = styled(NavCustom)`
-  display: block;
+  display: none;
   @media only screen and (${device.tablet}) {
     display: block;
   }
