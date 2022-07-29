@@ -53,10 +53,5 @@ const Box = styled.div`
 `;
 
 const Paragraph1Impl = styled(Paragraph1)`
-  @media only screen and (${device.mobileL}) {
-    font-size: 13px;
-  }
-  @media only screen and (${device.mobileM}) {
-    font-size: 10px;
-  }
+  font-size: 1.5vw;
 `;

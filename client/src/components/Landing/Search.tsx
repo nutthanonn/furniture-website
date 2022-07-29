@@ -67,7 +67,7 @@ const Box = styled.form`
     width: calc(100% - 1.6rem);
     height: calc(100% - 20rem);
     position: static;
-    padding: 0 0 0 1.625rem;
+    padding: 0 0 2rem 1.625rem;
     /* border: 2px solid black; */
   }
 
@@ -81,9 +81,14 @@ const Box = styled.form`
 
 const InputCustom = styled(Input)`
   margin: 0 1rem;
+  @media only screen and (${device.mobileL}) {
+    width: 10rem;
+  }
+
   @media only screen and (${device.mobileS}) {
     width: 5rem;
   }
+
   flex-grow: 1;
   ::placeholder {
     color: #afadb5;

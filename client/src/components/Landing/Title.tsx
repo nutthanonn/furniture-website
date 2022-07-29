@@ -11,10 +11,10 @@ const Title: React.FC = () => {
   return (
     <BoxHeader>
       <BoxTitle>
-        <Heading1Impl>
+        <Heading1Custom>
           Discover Furniture With High Quality Woo
           <img src={StarIcon} alt="star" />
-        </Heading1Impl>
+        </Heading1Custom>
       </BoxTitle>
       <SubTitle />
       <ArrowIcon src={ArrowIconImg} />
@@ -29,36 +29,25 @@ const BoxHeader = styled(Container)`
   margin-top: 6.25rem;
 `;
 
-const Heading1Impl = styled(Heading1)`
+const Heading1Custom = styled(Heading1)`
+  font-size: 4.444vw;
+  width: 50.278vw;
   @media only screen and (${device.tablet}) {
-    font-size: 44px;
+    font-size: 6vw;
+    width: 80vw;
   }
-
-  @media only screen and (${device.mobileL}) {
-    font-size: 25px;
+  > img {
+    width: 10%;
   }
 `;
 
 const BoxTitle = styled.div`
   text-align: center;
   margin-inline: auto;
-  padding: 0 15rem;
-  @media only screen and (${device.laptop}) {
-    padding: 0 3rem;
+  display: flex;
+  > * {
+    margin: 0 auto;
   }
-
-  @media only screen and (${device.tablet}) {
-    padding: 0 2rem;
-  }
-
-  @media only screen and (${device.mobileL}) {
-    width: 300px;
-  }
-
-  @media only screen and (${device.mobileM}) {
-    width: 230px;
-  }
-
   /* border: 2px solid black; */
 `;
 

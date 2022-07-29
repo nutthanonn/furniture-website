@@ -19,33 +19,22 @@ const SubTitle: React.FC = () => {
 export default SubTitle;
 
 const BoxSubtitle = styled.div`
-  width: 49.75rem;
   height: 96px;
-  margin-inline: auto;
+  display: flex;
+  > * {
+    margin: 1rem auto;
+  }
   height: fit-content;
-  @media only screen and (${device.laptop}) {
-    width: 40rem;
-  }
-
-  @media only screen and (${device.mobileL}) {
-    width: 16rem;
-  }
 
   /* border: 2px solid black; */
 `;
 
 const ParagraphCustom = styled(Paragraph1)`
   text-align: center;
-  padding-inline: 1rem;
-  @media only screen and (${device.laptop}) {
-    font-size: 18px;
-  }
-
-  @media only screen and (${device.mobileL}) {
-    font-size: 14px;
-  }
-
-  @media only screen and (${device.mobileL}) {
-    font-size: 12px;
+  font-size: 1.5vw;
+  width: 55.278vw;
+  @media only screen and (${device.tablet}) {
+    font-size: 2.5vw;
+    width: 80vw;
   }
 `;
