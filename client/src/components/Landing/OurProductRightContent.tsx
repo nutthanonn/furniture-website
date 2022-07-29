@@ -27,15 +27,15 @@ const Img = styled.img`
     margin-top: 0;
     width: 595px;
     height: 260px;
-    object-fit: cover;
   }
 
   @media only screen and (${device.mobileL}) {
     margin-top: 0;
     width: 327px;
     height: 200px;
-    object-fit: cover;
   }
+
+  object-fit: cover;
 `;
 
 const OurProductNumberImpl = styled.div`

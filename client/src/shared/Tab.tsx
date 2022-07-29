@@ -56,7 +56,7 @@ const HeadingCustom = styled(Paragraph1)`
     height: 2px;
     background-color: ${(props: { val: boolean }) =>
       props.val ? " #518581 " : "transparent"};
-    bottom: -140%;
+    bottom: -141%;
     left: 0;
     transition: background-color 0.25s ease;
   }

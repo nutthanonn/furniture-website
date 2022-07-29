@@ -57,7 +57,7 @@ const MenuIcon = styled.img`
   &:hover {
     background-color: ${Gray};
   }
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 50%;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -95,7 +95,7 @@ const MenuItem = styled.div`
   background-color: transparent;
   display: flex;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem;
   &:hover {
     background-color: rgba(239, 239, 240, 0.9);
     > h3 {

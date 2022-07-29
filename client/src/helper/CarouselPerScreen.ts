@@ -8,7 +8,8 @@ const device = {
   desktop: 2560,
 };
 
-export const SlidePerScreen = (size: number) => {
+export const SlidePerScreen = (): number => {
+  const size = window.innerWidth;
   if (size <= device.mobileL) {
     return 1;
   } else if (size <= device.tablet) {

@@ -13,6 +13,7 @@ export const Button = styled.button`
   background-color: ${(props: propsType) => props.bgcolor || Gray};
   color: ${(props: propsType) => props.color || Gray};
   display: flex;
+  cursor: pointer;
   > * {
     margin: auto;
   }
@@ -22,9 +23,4 @@ export const PrimaryButton = styled(Button)`
   width: 10.625rem;
   height: 3.375rem;
   background: ${Green};
-  cursor: pointer;
-  color: ${(props: propsType) => props.color || Gray};
-  > * {
-    margin: auto;
-  }
 `;

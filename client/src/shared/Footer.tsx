@@ -6,13 +6,22 @@ import { device } from "../common/ScreenSize";
 import { Paragraph1, Heading4 } from "../common/TextSlyle";
 import { Contact } from "../data/Contact";
 import { Gray } from "../common/Color";
+import { useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClickLogo = () => {
+    navigate("");
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <Container>
       <Box>
         <LogoDetail>
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" onClick={handleClickLogo} />
           <Paragraph1Impl>
             Lalasia is digital agency that help you make better experience
             iaculis cras in.
@@ -61,6 +70,11 @@ const LogoDetail = styled.div`
   @media only screen and (${device.mobileL}) {
     width: 100%;
   }
+
+  > img {
+    cursor: pointer;
+  }
+
   /* border: 2px solid black; */
 `;
 
@@ -86,6 +100,9 @@ const Grid = styled.div`
 
 const ContactLink = styled(Paragraph1)`
   cursor: pointer;
+  &:hover {
+    color: ${Gray};
+  }
   @media only screen and (${device.tablet}) {
     color: ${Gray};
   }
@@ -97,7 +114,6 @@ const ContactLink = styled(Paragraph1)`
 `;
 
 const Paragraph1Impl = styled(Paragraph1)`
-  cursor: pointer;
   @media only screen and (${device.tablet}) {
     color: ${Gray};
   }

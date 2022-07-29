@@ -36,6 +36,7 @@ export default PopularProductCard;
 const Box = styled.div`
   width: 24.625rem;
   height: 34rem;
+  margin: auto;
   /* border: 2px solid black; */
 `;
 
