@@ -1,7 +1,7 @@
 import React from "react";
-import { Green } from "../common/Color";
+import { Green } from "common/Color";
 import styled from "styled-components";
-import { Paragraph3 } from "../common/TextSlyle";
+import { Paragraph3 } from "common/TextSlyle";
 
 interface ChipProps {
   title: string;

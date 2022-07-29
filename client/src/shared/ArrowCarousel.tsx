@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ArrowLeft from "../assets/svg/arrow-left.svg";
+import ArrowLeft from "assets/svg/arrow-left.svg";
 
 const ArrowCarousel: React.FC = () => {
   return (

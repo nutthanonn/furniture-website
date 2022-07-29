@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { data } from "../../../assets/test/data/CarouselSale";
+import { data } from "assets/test/data/CarouselSale";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ArrowCarousel from "../../../shared/ArrowCarousel";
+import ArrowCarousel from "shared/ArrowCarousel";
 import CarouselSaleCard from "./CarouselSaleCard";
 
 const CarouselSale: React.FC = () => {

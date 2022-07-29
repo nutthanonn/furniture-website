@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading2, Heading6, Paragraph1 } from "../../../common/TextSlyle";
-import { Green } from "../../../common/Color";
-import { Container } from "../../../common/Container";
-import { Button } from "../../../common/ButtonStyle";
-import SortIcon from "../../../assets/svg/sort.svg";
+import { Heading2, Heading6, Paragraph1 } from "common/TextSlyle";
+import { Green } from "common/Color";
+import { Container } from "common/Container";
+import { Button } from "common/ButtonStyle";
+import SortIcon from "assets/svg/sort.svg";
 
 const TotalProduct: React.FC = () => {
   return (

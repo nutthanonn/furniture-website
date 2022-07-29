@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import BagIcon from "../assets/svg/bag.svg";
-import AccountIcon from "../assets/svg/account.svg";
+import BagIcon from "assets/svg/bag.svg";
+import AccountIcon from "assets/svg/account.svg";
 
 const Account: React.FC = () => {
   return (

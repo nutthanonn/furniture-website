@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ArticleCenter from "../../shared/ArticleCenter";
+import ArticleCenter from "shared/ArticleCenter";
 
 const PoppularProduct: React.FC = () => {
   const data = {

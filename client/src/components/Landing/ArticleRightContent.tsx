@@ -1,14 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Paragraph1,
-  Heading3,
-  Heading6,
-  Paragraph3,
-} from "../../common/TextSlyle";
-import { data } from "../../assets/test/data/articleBlog";
-import { Gray } from "../../common/Color";
-import { device } from "../../common/ScreenSize";
+import { Paragraph1, Heading3, Heading6, Paragraph3 } from "common/TextSlyle";
+import { data } from "assets/test/data/articleBlog";
+import { Gray } from "common/Color";
+import { device } from "common/ScreenSize";
 
 const ArticleRightContent: React.FC = () => {
   return (

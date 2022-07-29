@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import SearchIcon from "../../assets/svg/search.svg";
-import { PrimaryButton } from "../../common/ButtonStyle";
-import { Input } from "../../common/InputStyle";
-import { Heading5 } from "../../common/TextSlyle";
-import { Gray } from "../../common/Color";
-import { device } from "../../common/ScreenSize";
+import SearchIcon from "assets/svg/search.svg";
+import { PrimaryButton } from "common/ButtonStyle";
+import { Input } from "common/InputStyle";
+import { Heading5 } from "common/TextSlyle";
+import { Gray } from "common/Color";
+import { device } from "common/ScreenSize";
 
 const Search: React.FC = () => {
   const handleInput = useRef<HTMLInputElement>(null);

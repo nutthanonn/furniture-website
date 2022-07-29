@@ -1,11 +1,11 @@
 import React from "react";
-import { Heading1 } from "../../common/TextSlyle";
+import { Heading1 } from "common/TextSlyle";
 import styled from "styled-components";
 import SubTitle from "./SubTitle";
-import StarIcon from "../../assets/svg/star.svg";
-import ArrowIconImg from "../../assets/svg/arrow.svg";
-import { Container } from "../../common/Container";
-import { device } from "../../common/ScreenSize";
+import StarIcon from "assets/svg/star.svg";
+import ArrowIconImg from "assets/svg/arrow.svg";
+import { Container } from "common/Container";
+import { device } from "common/ScreenSize";
 
 const Title: React.FC = () => {
   return (

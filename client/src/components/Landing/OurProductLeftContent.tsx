@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading5, Heading2, Paragraph1 } from "../../common/TextSlyle";
-import { Yellow, Gray } from "../../common/Color";
-import { PrimaryButton } from "../../common/ButtonStyle";
-import Example1 from "../../assets/images/example1.png";
+import { Heading5, Heading2, Paragraph1 } from "common/TextSlyle";
+import { Yellow, Gray } from "common/Color";
+import { PrimaryButton } from "common/ButtonStyle";
+import Example1 from "assets/images/example1.png";
 import OurProductNumber from "./OurProductNumber";
-import { device } from "../../common/ScreenSize";
+import { device } from "common/ScreenSize";
 
 const OurProductLeftContent: React.FC = () => {
   return (

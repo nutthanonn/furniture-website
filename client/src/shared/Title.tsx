@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading1, Paragraph1 } from "../common/TextSlyle";
-import { Gray } from "../common/Color";
+import { Heading1, Paragraph1 } from "common/TextSlyle";
+import { Gray } from "common/Color";
 
 const Title: React.FC = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import { Paragraph1 } from "../../common/TextSlyle";
+import { Paragraph1 } from "common/TextSlyle";
 import styled from "styled-components";
-import { Gray } from "../../common/Color";
-import { device } from "../../common/ScreenSize";
+import { Gray } from "common/Color";
+import { device } from "common/ScreenSize";
 
 const SubTitle: React.FC = () => {
   return (

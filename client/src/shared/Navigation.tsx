@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Tab from "./Tab";
-import CompanyLogo from "../assets/svg/logo.svg";
+import CompanyLogo from "assets/svg/logo.svg";
 import Account from "./Account";
-import { device } from "../common/ScreenSize";
+import { device } from "common/ScreenSize";
 import NavigationMobile from "./NavigationMobile";
 import { useNavigate } from "react-router-dom";
 

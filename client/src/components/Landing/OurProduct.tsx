@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../common/Container";
+import { Container } from "common/Container";
 import OurProductLeftContent from "./OurProductLeftContent";
 import OurProductRightContent from "./OurProductRightContent";
-import { device } from "../../common/ScreenSize";
+import { device } from "common/ScreenSize";
 
 const OurProduct: React.FC = () => {
   return (

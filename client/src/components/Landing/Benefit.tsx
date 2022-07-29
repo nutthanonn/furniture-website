@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../common/Container";
-import { Heading5, Heading2, Paragraph1 } from "../../common/TextSlyle";
+import { Container } from "common/Container";
+import { Heading5, Heading2, Paragraph1 } from "common/TextSlyle";
 import BenefitBlog from "./BenefitBlog";
-import { Gray, Yellow } from "../../common/Color";
-import { device } from "../../common/ScreenSize";
+import { Gray, Yellow } from "common/Color";
+import { device } from "common/ScreenSize";
 
 const Benefit: React.FC = () => {
   return (

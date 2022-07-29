@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading2, Paragraph1 } from "../../common/TextSlyle";
-import { Gray } from "../../common/Color";
-import { device } from "../../common/ScreenSize";
+import { Heading2, Paragraph1 } from "common/TextSlyle";
+import { Gray } from "common/Color";
 
 interface OurProductNumberProps {
   title: string;

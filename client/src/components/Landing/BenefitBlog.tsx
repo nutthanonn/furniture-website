@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { blogData } from "../../assets/test/data/blog";
-import { Heading3, Paragraph1 } from "../../common/TextSlyle";
-import { Gray } from "../../common/Color";
-import { device } from "../../common/ScreenSize";
+import { blogData } from "assets/test/data/blog";
+import { Heading3, Paragraph1 } from "common/TextSlyle";
+import { Gray } from "common/Color";
+import { device } from "common/ScreenSize";
 
 const BenefitBlog: React.FC = () => {
   return (

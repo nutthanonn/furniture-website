@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../common/Container";
-import ArticleCenter from "../../shared/ArticleCenter";
+import { Container } from "common/Container";
+import ArticleCenter from "shared/ArticleCenter";
 
 const Testimonials: React.FC = () => {
   const data = {

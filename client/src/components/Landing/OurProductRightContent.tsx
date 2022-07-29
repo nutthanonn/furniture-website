@@ -1,8 +1,8 @@
 import React from "react";
 import OurProductNumber from "./OurProductNumber";
-import Example2 from "../../assets/images/example2.png";
+import Example2 from "assets/images/example2.png";
 import styled from "styled-components";
-import { device } from "../../common/ScreenSize";
+import { device } from "common/ScreenSize";
 
 const OurProductRightContent: React.FC = () => {
   return (

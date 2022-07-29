@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Rectangle from "../../assets/images/Rectangle2.png";
-import { Container } from "../../common/Container";
-import { device } from "../../common/ScreenSize";
+import Rectangle from "assets/images/Rectangle2.png";
+import { Container } from "common/Container";
+import { device } from "common/ScreenSize";
 import Search from "./Search";
 
 const Furniture: React.FC = () => {

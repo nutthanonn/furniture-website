@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/svg/logo.svg";
-import { Container } from "../common/Container";
-import { device } from "../common/ScreenSize";
-import { Paragraph1, Heading4 } from "../common/TextSlyle";
-import { Contact } from "../data/Contact";
-import { Gray } from "../common/Color";
+import Logo from "assets/svg/logo.svg";
+import { Container } from "common/Container";
+import { device } from "common/ScreenSize";
+import { Paragraph1, Heading4 } from "common/TextSlyle";
+import { Contact } from "data/Contact";
+import { Gray } from "common/Color";
 import { useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {

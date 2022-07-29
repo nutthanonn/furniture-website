@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import DoubleCouteIcon from "../../assets/svg/doubleCoute.svg";
-import { Paragraph1, Heading4, Heading5 } from "../../common/TextSlyle";
-import { Gray } from "../../common/Color";
-import Nut from "../../assets/images/nutpicture.png";
-import StarEarn from "../../assets/svg/star-earn.svg";
-import { device } from "../../common/ScreenSize";
+import DoubleCouteIcon from "assets/svg/doubleCoute.svg";
+import { Paragraph1, Heading4, Heading5 } from "common/TextSlyle";
+import { Gray } from "common/Color";
+import Nut from "assets/images/nutpicture.png";
+import StarEarn from "assets/svg/star-earn.svg";
+import { device } from "common/ScreenSize";
 
 const TestimonialsCard: React.FC = () => {
   return (

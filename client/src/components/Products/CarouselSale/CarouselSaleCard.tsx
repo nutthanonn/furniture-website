@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Chip from "../../../shared/Chip";
-import { Heading2, Heading3 } from "../../../common/TextSlyle";
+import Chip from "shared/Chip";
+import { Heading2, Heading3 } from "common/TextSlyle";
 
 interface CarouselSaleCardPropsType {
   title: string;

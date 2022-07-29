@@ -5,11 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ArticleCard from "./ArticleCard";
 import { Navigation, Autoplay } from "swiper";
 import styled from "styled-components";
-import { Button } from "../../common/ButtonStyle";
-import ArrowLeft from "../../assets/svg/arrow-article-left.svg";
-import ArrowRight from "../../assets/svg/arrow-article-right.svg";
-import { data } from "../../assets/test/data/articleCarouselData";
-import { device } from "../../common/ScreenSize";
+import { Button } from "common/ButtonStyle";
+import ArrowLeft from "assets/svg/arrow-article-left.svg";
+import ArrowRight from "assets/svg/arrow-article-right.svg";
+import { data } from "assets/test/data/articleCarouselData";
+import { device } from "common/ScreenSize";
 
 const ArticleCarousel: React.FC = () => {
   return (

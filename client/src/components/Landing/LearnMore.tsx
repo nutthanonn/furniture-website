@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../common/Container";
-import { Heading2 } from "../../common/TextSlyle";
-import { PrimaryButton } from "../../common/ButtonStyle";
-import Arrow from "../../assets/svg/arrow-article-right.svg";
-import { Heading5 } from "../../common/TextSlyle";
-import { device } from "../../common/ScreenSize";
+import { Container } from "common/Container";
+import { Heading2 } from "common/TextSlyle";
+import { PrimaryButton } from "common/ButtonStyle";
+import Arrow from "assets/svg/arrow-article-right.svg";
+import { Heading5 } from "common/TextSlyle";
+import { device } from "common/ScreenSize";
 
 const LearnMore: React.FC = () => {
   return (

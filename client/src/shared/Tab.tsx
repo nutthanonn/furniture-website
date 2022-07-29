@@ -12,7 +12,7 @@ const Tab: React.FC = () => {
 
   useEffect(() => {
     setIsSelect(GetPath());
-  });
+  }, [isSelect]);
 
   const handleClick = (item: string) => {
     setIsSelect(item);

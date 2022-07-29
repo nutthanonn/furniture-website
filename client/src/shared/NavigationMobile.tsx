@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Logo from "../assets/svg/logo.svg";
-import MenuIconSvg from "../assets/svg/menu.svg";
-import { Gray, Yellow } from "../common/Color";
+import Logo from "assets/svg/logo.svg";
+import MenuIconSvg from "assets/svg/menu.svg";
+import { Gray, Yellow } from "common/Color";
 import { useNavigate } from "react-router-dom";
-import { Heading3 } from "../common/TextSlyle";
+import { Heading3 } from "common/TextSlyle";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { AiTwotoneCustomerService } from "react-icons/ai";
 import { RiArticleFill } from "react-icons/ri";
 import { BiGroup } from "react-icons/bi";
-import { device } from "../common/ScreenSize";
+import { device } from "common/ScreenSize";
 
 const NavigationMobile: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);

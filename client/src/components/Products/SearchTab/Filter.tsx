@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import FilterIcon from "../../../assets/svg/filter.svg";
-import { Button } from "../../../common/ButtonStyle";
-import { Paragraph1 } from "../../../common/TextSlyle";
+import FilterIcon from "assets/svg/filter.svg";
+import { Button } from "common/ButtonStyle";
+import { Paragraph1 } from "common/TextSlyle";
 
 const Filter: React.FC = () => {
   return (

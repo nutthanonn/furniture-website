@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../../common/ScreenSize";
-import { Paragraph1, Heading3 } from "../../common/TextSlyle";
+import { device } from "common/ScreenSize";
+import { Paragraph1, Heading3 } from "common/TextSlyle";
 
 interface valTypes {
   id: number;

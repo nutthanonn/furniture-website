@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { data } from "../../assets/test/data/popularProduct";
+import { data } from "assets/test/data/popularProduct";
 import { Navigation, Mousewheel, Autoplay } from "swiper";
-import ArrowLeft from "../../assets/svg/arrow-left.svg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/mousewheel";
 import PopularProductCard from "./PopularProductCard";
-import { SlidePerScreen } from "../../helper/CarouselPerScreen";
-import ArrowCarousel from "../../shared/ArrowCarousel";
+import { SlidePerScreen } from "helper/CarouselPerScreen";
+import ArrowCarousel from "shared/ArrowCarousel";
 
 const PoppularProductCarousel: React.FC = () => {
   return (

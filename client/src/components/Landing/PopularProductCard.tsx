@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading5, Heading3, Paragraph1 } from "../../common/TextSlyle";
-import { Gray } from "../../common/Color";
+import { Heading5, Heading3, Paragraph1 } from "common/TextSlyle";
+import { Gray } from "common/Color";
 
 interface PopularProductCardPropsType {
   image: string;

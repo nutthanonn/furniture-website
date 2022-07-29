@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../common/Container";
-import { device } from "../../common/ScreenSize";
+import { Container } from "common/Container";
+import { device } from "common/ScreenSize";
 import ArticlesLeftContent from "./ArlicleLeftContent";
 import ArticleRightContent from "./ArticleRightContent";
 
