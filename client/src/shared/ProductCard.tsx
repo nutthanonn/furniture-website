@@ -2,8 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Heading5, Heading3, Paragraph1 } from "common/TextSlyle";
 import { Gray } from "common/Color";
+import {
+  CARD_HEIGH,
+  CARD_WIDTH,
+  IMAGE_HEIGH,
+  IMAGE_WIDTH,
+} from "common/CardSize";
 
-interface PopularProductCardPropsType {
+interface ProductCardPropsType {
   image: string;
   price: number;
   name: string;
@@ -11,7 +17,7 @@ interface PopularProductCardPropsType {
   category: string;
 }
 
-const PopularProductCard: React.FC<PopularProductCardPropsType> = (props) => {
+const ProductCard: React.FC<ProductCardPropsType> = (props) => {
   const { image, price, name, description, category } = props;
 
   return (
@@ -31,18 +37,18 @@ const PopularProductCard: React.FC<PopularProductCardPropsType> = (props) => {
   );
 };
 
-export default PopularProductCard;
+export default ProductCard;
 
 const Box = styled.div`
-  width: 24.625rem;
-  height: 34rem;
+  width: ${CARD_WIDTH};
+  height: ${CARD_HEIGH};
   margin: auto;
   /* border: 2px solid black; */
 `;
 
 const Img = styled.img`
-  width: 100%;
-  height: 22.5rem;
+  width: ${IMAGE_WIDTH};
+  height: ${IMAGE_HEIGH};
   object-fit: cover;
 `;
 
