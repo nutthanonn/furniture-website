@@ -5,6 +5,7 @@ import { Heading5, Heading2, Paragraph1 } from "common/TextSlyle";
 import BenefitBlog from "./BenefitBlog";
 import { Gray, Yellow } from "common/Color";
 import { device } from "common/ScreenSize";
+import { DEFAULT_HOME_MARGIN } from "common/Space";
 
 const Benefit: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const Benefit: React.FC = () => {
 export default Benefit;
 
 const Box = styled.div`
-  margin-top: 11.25rem;
+  margin-top: ${DEFAULT_HOME_MARGIN};
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

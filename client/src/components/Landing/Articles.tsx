@@ -4,6 +4,7 @@ import { Container } from "common/Container";
 import { device } from "common/ScreenSize";
 import ArticlesLeftContent from "./ArlicleLeftContent";
 import ArticleRightContent from "./ArticleRightContent";
+import { DEFAULT_HOME_MARGIN } from "common/Space";
 
 const Articles: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export default Articles;
 
 const Box = styled(Container)`
   /* width: 100%; */
-  margin-top: 11.25rem;
+  margin-top: ${DEFAULT_HOME_MARGIN};
   display: flex;
   justify-content: center;
 

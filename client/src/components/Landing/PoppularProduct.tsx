@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ArticleCenter from "shared/ArticleCenter";
+import { DEFAULT_HOME_MARGIN } from "common/Space";
 
 const PoppularProduct: React.FC = () => {
   const data = {
@@ -22,5 +23,5 @@ export default PoppularProduct;
 const Box = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 11.25rem;
+  margin-top: ${DEFAULT_HOME_MARGIN};
 `;

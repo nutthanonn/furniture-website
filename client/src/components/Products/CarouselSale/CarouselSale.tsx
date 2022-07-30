@@ -49,5 +49,5 @@ const Box = styled.div`
 `;
 
 const ArrowCarouselCustom = styled(ArrowCarousel)`
-  border: 2px solid black;
+  /* border: 2px solid black; */
 `;

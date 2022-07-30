@@ -6,9 +6,9 @@ import { Navigation, Mousewheel, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/mousewheel";
-import PopularProductCard from "./PopularProductCard";
 import { SlidePerScreen } from "helper/CarouselPerScreen";
 import ArrowCarousel from "shared/ArrowCarousel";
+import ProductCard from "shared/ProductCard";
 
 const PoppularProductCarousel: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ const PoppularProductCarousel: React.FC = () => {
         {data.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <PopularProductCard {...item} />
+              <ProductCard {...item} />
             </SwiperSlide>
           );
         })}

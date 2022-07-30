@@ -6,6 +6,7 @@ import { PrimaryButton } from "common/ButtonStyle";
 import Arrow from "assets/svg/arrow-article-right.svg";
 import { Heading5 } from "common/TextSlyle";
 import { device } from "common/ScreenSize";
+import { DEFAULT_HOME_MARGIN } from "common/Space";
 
 const LearnMore: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const LearnMore: React.FC = () => {
 export default LearnMore;
 
 const Box = styled(Container)`
-  margin-top: 11.25rem;
+  margin-top: ${DEFAULT_HOME_MARGIN};
   margin-bottom: 5rem;
   display: flex;
   justify-content: space-around;

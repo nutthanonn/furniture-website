@@ -4,6 +4,7 @@ import { Container } from "common/Container";
 import OurProductLeftContent from "./OurProductLeftContent";
 import OurProductRightContent from "./OurProductRightContent";
 import { device } from "common/ScreenSize";
+import { DEFAULT_HOME_MARGIN } from "common/Space";
 
 const OurProduct: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const OurProduct: React.FC = () => {
 export default OurProduct;
 
 const Box = styled(Container)`
-  margin-top: 11.25rem;
+  margin-top: ${DEFAULT_HOME_MARGIN};
   display: flex;
   justify-content: center;
   gap: 3.125rem;
