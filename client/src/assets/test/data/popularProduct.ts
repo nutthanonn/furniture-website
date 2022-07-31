@@ -14,7 +14,7 @@ interface PopularProductCardPropsType {
 
 export const data: Array<PopularProductCardPropsType> = [
   {
-    id: 1,
+    id: Math.random(),
     image: Product1,
     price: 62.23,
     name: "Wooden Bookshelf",
@@ -22,7 +22,7 @@ export const data: Array<PopularProductCardPropsType> = [
     category: "Living room",
   },
   {
-    id: 2,
+    id: Math.random(),
     image: Product2,
     price: 63.47,
     name: "White Aesthetic Chair",
@@ -30,7 +30,7 @@ export const data: Array<PopularProductCardPropsType> = [
     category: "Chair",
   },
   {
-    id: 3,
+    id: Math.random(),
     image: Product3,
     price: 62.23,
     name: "Bardono Smart Lamp",
@@ -38,11 +38,51 @@ export const data: Array<PopularProductCardPropsType> = [
     category: "Lamp",
   },
   {
-    id: 4,
+    id: Math.random(),
     image: Product4,
     price: 58.39,
     name: "Sofa Empuk Banget",
     description: "Using kapuk randu material",
     category: "Sofa",
+  },
+  {
+    id: Math.random(),
+    image: Product1,
+    price: 62.23,
+    name: "Wooden Bookshelf",
+    description: "Combination of wood and wool",
+    category: "Living room",
+  },
+  {
+    id: Math.random(),
+    image: Product2,
+    price: 63.47,
+    name: "White Aesthetic Chair",
+    description: "Combination of wood and wool",
+    category: "Chair",
+  },
+  {
+    id: Math.random(),
+    image: Product3,
+    price: 62.23,
+    name: "Bardono Smart Lamp",
+    description: "Easy to use with bluetooth connection",
+    category: "Lamp",
+  },
+  {
+    id: Math.random(),
+    image: Product4,
+    price: 58.39,
+    name: "Sofa Empuk Banget",
+    description: "Using kapuk randu material",
+    category: "Sofa",
+  },
+  {
+    id: Math.random(),
+    image: Product1,
+    price: 62.23,
+    name: "Wooden Bookshelf",
+    description: "Combination of wood and wool",
+    category: "Living room",
   },
 ];
