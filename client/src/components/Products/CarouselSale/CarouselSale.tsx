@@ -25,9 +25,9 @@ const CarouselSale: React.FC = () => {
         loop={true}
         autoplay={{ delay: 10000 }}
       >
-        {data.map((item) => {
+        {data.map((item, i) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <CarouselSaleCard {...item} />
             </SwiperSlide>
           );

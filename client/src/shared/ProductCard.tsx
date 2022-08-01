@@ -8,6 +8,7 @@ import {
   IMAGE_HEIGH,
   IMAGE_WIDTH,
 } from "common/CardSize";
+import { device } from "common/ScreenSize";
 
 interface ProductCardPropsType {
   image: string;
@@ -23,7 +24,7 @@ const ProductCard: React.FC<ProductCardPropsType> = (props) => {
   return (
     <Box>
       <Img src={image} />
-      <TextBox>
+      <TextBox id="text-box">
         <Heading5 style={{ margin: 0 }} color={Gray}>
           {category}
         </Heading5>
@@ -31,7 +32,7 @@ const ProductCard: React.FC<ProductCardPropsType> = (props) => {
         <Paragraph1 style={{ margin: 0 }} color={Gray}>
           {description}
         </Paragraph1>
-        <Heading3 style={{ marginTop: "1.125rem" }}>${price}</Heading3>
+        <Heading3 style={{ margin: 0, marginTop: ".8rem" }}>${price}</Heading3>
       </TextBox>
     </Box>
   );
@@ -43,6 +44,10 @@ const Box = styled.div`
   width: ${CARD_WIDTH};
   height: ${CARD_HEIGH};
   margin: auto;
+  @media only screen and (${device.tablet}) {
+    width: calc(${CARD_WIDTH} - 5rem);
+    height: fit-content;
+  }
   /* border: 2px solid black; */
 `;
 
@@ -55,10 +60,20 @@ const Img = styled.img`
 const TextBox = styled.div`
   margin-top: 1.625rem;
   width: 100%;
-  height: 9.875rem;
-  /* border: 2px solid black; */
+  height: fit-content;
+  > p,
+  h5,
+  h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  /* border: 2px solid green; */
 `;
 
 const CustomHeading3 = styled(Heading3)`
   margin: 0.875rem 0 0.375rem 0;
+
+  /* border: 2px solid black; */
 `;

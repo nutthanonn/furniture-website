@@ -13,7 +13,7 @@ export const SlidePerScreen = (): number => {
   if (size <= device.mobileL) {
     return 1;
   } else if (size <= device.tablet) {
-    return 1.5;
+    return 2.1;
   } else if (size <= device.laptop) {
     return 2.5;
   } else if (size <= device.laptopL) {

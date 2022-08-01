@@ -4,6 +4,7 @@ import Search from "components/Products/SearchTab/Search";
 import TotalProduct from "components/Products/Total/TotalProduct";
 import ProductGrid from "components/Products/ShowProduct/ProductGrid";
 import Title from "shared/Title";
+import Paginate from "components/Products/Pagination/Paginate";
 
 const Products: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Products: React.FC = () => {
       <Search />
       <TotalProduct />
       <ProductGrid />
+      <Paginate />
     </div>
   );
 };
