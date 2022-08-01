@@ -36,18 +36,17 @@ const ProductGrid: React.FC<ProductPropsType> = observer((props) => {
 
   useEffect(() => {
     if (store.searchValue !== "") {
-      setProductData(
-        data.filter(
-          (item) =>
-            item.name
-              .toLocaleLowerCase()
-              .search(store.searchValue.toLocaleLowerCase()) !== -1
-        )
+      const productList: any = data.filter(
+        (item) =>
+          item.name
+            .toLocaleLowerCase()
+            .search(store.searchValue.toLocaleLowerCase()) !== -1
       );
+      setProductData(SetProductPerPage(store.pageNumber, productList));
     } else {
       setProductData(SetProductPerPage(store.pageNumber, data));
     }
-  }, [store.searchValue]);
+  }, [store.searchValue, store.pageNumber]);
 
   return (
     <Box>
