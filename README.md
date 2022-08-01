@@ -8,7 +8,7 @@
 
   - [x] responsive
 
-- [ ] product page
+- [x] product page
 
   - [ ] responsive
 
