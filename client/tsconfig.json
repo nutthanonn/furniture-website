@@ -16,7 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "typeRoots": ["src/assets/@types/index.d.ts"]
+    "typeRoots": ["src/assets/@types/index.d.ts"],
+    "experimentalDecorators": true
   },
   "include": ["src"]
 }

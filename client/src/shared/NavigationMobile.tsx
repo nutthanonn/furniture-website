@@ -13,7 +13,7 @@ import { device } from "common/ScreenSize";
 
 const NavigationMobile: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const TabItem = ["Product", "Service", "Article", "About Us"];
+  const TabItem = ["product", "service", "article", "about us"];
   const icon = [
     <MdOutlineProductionQuantityLimits size={30} />,
     <AiTwotoneCustomerService size={30} />,
@@ -101,6 +101,7 @@ const MenuItem = styled.div`
     > h3 {
       color: ${Yellow};
       transition: color 0.5s ease;
+      text-transform: capitalize;
     }
   }
   transition: background-color 0.5s ease;

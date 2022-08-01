@@ -1,3 +1,5 @@
+// หน้านี้ต้องรอ ทำ backend
+
 import { Container } from "common/Container";
 import React from "react";
 import ProductCard from "shared/ProductCard";
@@ -5,11 +7,51 @@ import styled from "styled-components";
 import { data } from "assets/test/data/popularProduct";
 import { device } from "common/ScreenSize";
 import { CARD_HEIGH, CARD_WIDTH, IMAGE_HEIGH } from "common/CardSize";
+import { useEffect } from "react";
+import { useState } from "react";
+import { ProductStoreImpl } from "store/ProductStore";
+import { observer } from "mobx-react";
+import { SetProductPerPage } from "helper/setProductPerPage";
 
-const ProductGrid: React.FC = () => {
+interface ProductPropsType {
+  store: ProductStoreImpl;
+}
+
+interface productDataType {
+  id: number;
+  image: string;
+  price: number;
+  name: string;
+  description: string;
+  category: string;
+}
+
+const ProductGrid: React.FC<ProductPropsType> = observer((props) => {
+  const { store } = props;
+  const [productData, setProductData] = useState<Array<productDataType>>([]);
+
+  useEffect(() => {
+    setProductData(SetProductPerPage(store.pageNumber, data));
+  }, [store.pageNumber]);
+
+  useEffect(() => {
+    if (store.searchValue !== "") {
+      setProductData(
+        data.filter(
+          (item) =>
+            item.name
+              .toLocaleLowerCase()
+              .search(store.searchValue.toLocaleLowerCase()) !== -1
+        )
+      );
+    } else {
+      setProductData(SetProductPerPage(store.pageNumber, data));
+    }
+  }, [store.searchValue]);
+
   return (
     <Box>
-      {data.map((item, i) => {
+      {productData.map((item, i) => {
         return (
           <ProductCardCustom key={i}>
             <ProductCard {...item} />
@@ -18,7 +60,7 @@ const ProductGrid: React.FC = () => {
       })}
     </Box>
   );
-};
+});
 
 export default ProductGrid;
 
@@ -26,6 +68,7 @@ const Box = styled(Container)`
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 30px;
+  margin-right: auto;
 
   @media only screen and (${device.laptop}) {
     grid-template-columns: auto auto;
@@ -42,5 +85,6 @@ const ProductCardCustom = styled.div`
       }
     }
   }
+  margin-right: auto;
   /* border: 2px solid black; */
 `;

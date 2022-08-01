@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <Navigation />
       <Routes>
         <Route path="" element={<Landing />} />
-        <Route path="product" element={<Products />} />
+        <Route path="product/*" element={<Products />} />
       </Routes>
       <Footer />
     </div>

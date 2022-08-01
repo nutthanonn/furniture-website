@@ -7,8 +7,15 @@ import { Heading5 } from "../../../common/TextSlyle";
 import { Gray } from "../../../common/Color";
 import { Container } from "../../../common/Container";
 import Filter from "./Filter";
+import { ProductStoreImpl } from "store/ProductStore";
 
-const Search: React.FC = () => {
+interface SearchPropsType {
+  store: ProductStoreImpl;
+}
+
+const Search: React.FC<SearchPropsType> = (props) => {
+  const { store } = props;
+
   const handleInput = useRef<HTMLInputElement>(null);
   const [searchVal, setSearchVal] = useState<string>("");
 
@@ -17,12 +24,16 @@ const Search: React.FC = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchVal(e.target.value);
+    const val: string = e.target.value;
+
+    setSearchVal(val);
+    store.setSearchValue(val);
   };
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     setSearchVal("");
+    store.setSearchValue("");
   };
 
   return (

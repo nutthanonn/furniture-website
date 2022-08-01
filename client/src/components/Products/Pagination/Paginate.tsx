@@ -1,18 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import styled from "styled-components";
-import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 import { Container } from "common/Container";
-import { Green } from "common/Color";
+import { Green, Gray } from "common/Color";
 import { PaginationControl } from "helper/PaignationControl";
+import { useNavigate } from "react-router-dom";
+import { ProductStoreImpl } from "store/ProductStore";
+
+interface PaginatePropsType {
+  store: ProductStoreImpl;
+}
 
 const MAX_PAGE = 10; // mock data
 
-const Paginate: React.FC = () => {
+const Paginate: React.FC<PaginatePropsType> = (props) => {
+  const { store } = props;
+
+  const navigate = useNavigate();
   const [currPage, setCurrPage] = useState<number>(1);
+
+  useEffect(() => {
+    navigate(`${currPage}`);
+  }, [currPage, navigate]);
 
   const handlePageClick = (data: { selected: number }) => {
     setCurrPage(data.selected + 1);
+    store.setPageNumber(data.selected + 1);
   };
 
   return (
@@ -21,8 +35,14 @@ const Paginate: React.FC = () => {
         pageRangeDisplayed={PaginationControl(currPage, MAX_PAGE)}
         marginPagesDisplayed={1}
         pageCount={MAX_PAGE}
-        previousLabel={<GrFormPrevious />}
-        nextLabel={<GrFormNext />}
+        previousLabel={
+          <MdOutlineNavigateBefore color={currPage === 1 ? Gray : "black"} />
+        }
+        nextLabel={
+          <MdOutlineNavigateNext
+            color={currPage === MAX_PAGE ? Gray : "black"}
+          />
+        }
         breakLabel="..."
         onPageChange={handlePageClick}
         // renderOnZeroPageCount={null}

@@ -6,7 +6,7 @@ import { Green } from "../common/Color";
 import { GetPath } from "../helper/GetPath";
 
 const Tab: React.FC = () => {
-  const TabItem = ["Product", "Service", "Article", "About Us"];
+  const TabItem = ["product", "service", "article", "about us"];
   const [isSelect, setIsSelect] = useState<string>("");
   const navigate = useNavigate();
 
@@ -49,6 +49,7 @@ const TabChild = styled.div`
 const HeadingCustom = styled(Paragraph1)`
   position: relative;
   cursor: pointer;
+  text-transform: capitalize;
   &::after {
     content: "";
     position: absolute;
