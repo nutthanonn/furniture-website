@@ -14,12 +14,12 @@ interface ProductCardPropsType {
   image: string;
   price: number;
   name: string;
-  description: string;
+  detail: string;
   category: string;
 }
 
 const ProductCard: React.FC<ProductCardPropsType> = (props) => {
-  const { image, price, name, description, category } = props;
+  const { image, price, name, detail, category } = props;
 
   return (
     <Box>
@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardPropsType> = (props) => {
         </Heading5>
         <CustomHeading3>{name}</CustomHeading3>
         <Paragraph1 style={{ margin: 0 }} color={Gray}>
-          {description}
+          {detail}
         </Paragraph1>
         <Heading3 style={{ margin: 0, marginTop: ".8rem" }}>${price}</Heading3>
       </TextBox>

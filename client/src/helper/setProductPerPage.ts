@@ -5,7 +5,7 @@ interface productDataType {
   image: string;
   price: number;
   name: string;
-  description: string;
+  detail: string;
   category: string;
 }
 

@@ -22,7 +22,7 @@ interface productDataType {
   image: string;
   price: number;
   name: string;
-  description: string;
+  detail: string;
   category: string;
 }
 
@@ -30,13 +30,13 @@ const ProductGrid: React.FC<ProductPropsType> = observer((props) => {
   const { store } = props;
   const [productData, setProductData] = useState<Array<productDataType>>([]);
 
-  useEffect(() => {
-    setProductData(SetProductPerPage(store.pageNumber, data));
-  }, [store.pageNumber]);
+  // useEffect(() => {
+  //   setProductData(SetProductPerPage(store.pageNumber, data));
+  // }, [store.pageNumber]);
 
   useEffect(() => {
     if (store.searchValue !== "") {
-      const productList: any = data.filter(
+      const productList: Array<productDataType> = data.filter(
         (item) =>
           item.name
             .toLocaleLowerCase()
@@ -75,6 +75,13 @@ const Box = styled(Container)`
 `;
 
 const ProductCardCustom = styled.div`
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+  transition: all 0.25s ease;
+
   @media only screen and (${device.laptop}) {
     > div {
       width: calc(${CARD_WIDTH} - 7rem);
