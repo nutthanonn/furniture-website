@@ -30,10 +30,6 @@ const ProductGrid: React.FC<ProductPropsType> = observer((props) => {
   const { store } = props;
   const [productData, setProductData] = useState<Array<productDataType>>([]);
 
-  // useEffect(() => {
-  //   setProductData(SetProductPerPage(store.pageNumber, data));
-  // }, [store.pageNumber]);
-
   useEffect(() => {
     if (store.searchValue !== "") {
       const productList: Array<productDataType> = data.filter(
@@ -78,9 +74,11 @@ const ProductCardCustom = styled.div`
   cursor: pointer;
 
   &:hover {
+    background-color: #fcfcfc;
     transform: translateY(-5px);
   }
   transition: all 0.25s ease;
+  border-radius: 10px;
 
   @media only screen and (${device.laptop}) {
     > div {
