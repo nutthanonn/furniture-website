@@ -34,9 +34,11 @@ const Footer: React.FC = () => {
                 <Heading4>{item.title}</Heading4>
                 {item.categories.map((categories, i) => {
                   return (
-                    <ContactLink style={{ margin: "12px 0" }} key={i}>
-                      {categories}
-                    </ContactLink>
+                    <li>
+                      <ContactLink style={{ margin: "12px 0" }} key={i}>
+                        {categories}
+                      </ContactLink>
+                    </li>
                   );
                 })}
               </Grid>
@@ -90,8 +92,9 @@ const ContactBox = styled.div`
   /* border: 2px solid black; */
 `;
 
-const Grid = styled.div`
+const Grid = styled.ul`
   margin-left: auto;
+  list-style: none;
   @media only screen and (${device.laptop}) {
     margin-right: auto;
     margin-left: 0;

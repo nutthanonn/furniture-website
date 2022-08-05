@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Paragraph1 } from "../common/TextSlyle";
-import { useNavigate } from "react-router-dom";
 import { Green } from "../common/Color";
 import { GetPath } from "../helper/GetPath";
 
 const Tab: React.FC = () => {
   const TabItem = ["product", "service", "article", "about us"];
   const [isSelect, setIsSelect] = useState<string>("");
-  const navigate = useNavigate();
 
   useEffect(() => {
     setIsSelect(GetPath());
@@ -16,7 +14,6 @@ const Tab: React.FC = () => {
 
   const handleClick = (item: string) => {
     setIsSelect(item);
-    navigate(`/${item}`);
   };
 
   return (
@@ -24,13 +21,17 @@ const Tab: React.FC = () => {
       <TabChild>
         {TabItem.map((item, index) => {
           return (
-            <HeadingCustom
-              key={index}
-              val={isSelect === item ? true : false}
-              onClick={() => handleClick(item)}
-            >
-              {item}
-            </HeadingCustom>
+            <li>
+              <a href={`/${item}`}>
+                <HeadingCustom
+                  key={index}
+                  val={isSelect === item ? true : false}
+                  onClick={() => handleClick(item)}
+                >
+                  {item}
+                </HeadingCustom>
+              </a>
+            </li>
           );
         })}
       </TabChild>
@@ -40,10 +41,15 @@ const Tab: React.FC = () => {
 
 export default Tab;
 
-const TabChild = styled.div`
+const TabChild = styled.ul`
   display: flex;
   width: 28.813rem;
   justify-content: space-around;
+
+  list-style: none;
+  > li > a {
+    text-decoration: none;
+  }
 `;
 
 const HeadingCustom = styled(Paragraph1)`
