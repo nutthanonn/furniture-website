@@ -21,10 +21,9 @@ const Tab: React.FC = () => {
       <TabChild>
         {TabItem.map((item, index) => {
           return (
-            <li>
+            <li key={index}>
               <a href={`/${item}`}>
                 <HeadingCustom
-                  key={index}
                   val={isSelect === item ? true : false}
                   onClick={() => handleClick(item)}
                 >

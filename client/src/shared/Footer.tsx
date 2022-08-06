@@ -34,8 +34,8 @@ const Footer: React.FC = () => {
                 <Heading4>{item.title}</Heading4>
                 {item.categories.map((categories, i) => {
                   return (
-                    <li>
-                      <ContactLink style={{ margin: "12px 0" }} key={i}>
+                    <li key={i}>
+                      <ContactLink style={{ margin: "12px 0" }}>
                         {categories}
                       </ContactLink>
                     </li>
@@ -57,7 +57,7 @@ const Box = styled.div`
   display: flex;
   justify-content: space-between;
   border-top: 1.5px solid #ece4de;
-  margin-bottom: 5.5rem;
+  padding-bottom: 50px;
   @media only screen and (${device.tablet}) {
     flex-direction: column;
     padding-top: 3rem;
@@ -89,15 +89,20 @@ const ContactBox = styled.div`
   @media only screen and (${device.mobileL}) {
     width: 100%;
   }
-  /* border: 2px solid black; */
 `;
 
 const Grid = styled.ul`
-  margin-left: auto;
-  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
   @media only screen and (${device.laptop}) {
-    margin-right: auto;
-    margin-left: 0;
+    margin: 0;
+  }
+
+  > h4 {
+    @media only screen and (${device.mobileL}) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -112,7 +117,6 @@ const ContactLink = styled(Paragraph1)`
 
   @media only screen and (${device.mobileM}) {
     font-size: 10px;
-    color: ${Gray};
   }
 `;
 
