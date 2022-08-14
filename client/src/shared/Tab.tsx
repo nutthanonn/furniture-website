@@ -46,6 +46,7 @@ const TabChild = styled.ul`
   justify-content: space-around;
 
   list-style: none;
+  padding: 0;
   > li > a {
     text-decoration: none;
   }
