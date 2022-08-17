@@ -12,6 +12,7 @@ import { useState } from "react";
 import { ProductStoreImpl } from "store/ProductStore";
 import { observer } from "mobx-react";
 import { SetProductPerPage } from "helper/setProductPerPage";
+import { useNavigate } from "react-router-dom";
 
 interface ProductPropsType {
   store: ProductStoreImpl;
@@ -29,6 +30,7 @@ interface productDataType {
 const ProductGrid: React.FC<ProductPropsType> = observer((props) => {
   const { store } = props;
   const [productData, setProductData] = useState<Array<productDataType>>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (store.searchValue !== "") {
@@ -44,11 +46,16 @@ const ProductGrid: React.FC<ProductPropsType> = observer((props) => {
     }
   }, [store.searchValue, store.pageNumber]);
 
+  const handleClick = (item: number) => {
+    store.setProductId(item);
+    navigate("/product/details")
+  };
+
   return (
     <Box>
       {productData.map((item, i) => {
         return (
-          <ProductCardCustom key={i}>
+          <ProductCardCustom key={i} onClick={() => handleClick(item.id)}>
             <ProductCard {...item} />
           </ProductCardCustom>
         );

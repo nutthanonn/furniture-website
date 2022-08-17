@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface ProductColorPropsType {
-  color: string;
+  color?: string;
 }
 
 const ProductColor: React.FC<ProductColorPropsType> = (props) => {
@@ -16,5 +16,5 @@ export default ProductColor;
 const Box = styled.div`
   height: 50px;
   width: 50px;
-  background-color: ${(props: { val: string }) => props.val};
+  background-color: ${(props: { val?: string }) => props.val};
 `;
